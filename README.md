@@ -73,20 +73,6 @@ The `Sample` column in `HumanGrade.xlsx` stores the corresponding filename witho
 | `Overall_Liking` | Overall-liking score on the recorded 0–100 scale. |
 | `Freshness` | Perceived-freshness score on the recorded 0–100 scale. |
 
-## Maintaining the dataset
-
-When adding or correcting data:
-
-1. Preserve original images and raw sensory responses. Record corrections in a release note or commit message rather than silently replacing source data.
-2. Place every new image in the directory matching its sample and storage day.
-3. Use the established filename pattern, including units and decimal formatting. Filenames and workbook `Sample` keys are case-sensitive identifiers.
-4. Keep one unique image for each sample × storage-day × color-temperature × power combination.
-5. Add sensory data as one row per `Panel_ID` × `Sample` combination. Do not aggregate the raw ratings in `Total`.
-6. Before a release, verify that every workbook `Sample` has exactly one matching PNG basename and that no image is absent from the workbook.
-7. Check for duplicate panelist–sample rows, missing scores, invalid factor levels, unexpected image dimensions, and undocumented column changes.
-8. Update the counts, factor levels, data notes, and citation in this README whenever the dataset changes.
-
-Retain pseudonymous panel IDs and do not attempt to identify panelists.
 
 ## Citation
 
